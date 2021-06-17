@@ -10,7 +10,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background-image: url("./images/home-background.jpg");
+        background-image: url("images/home-background.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         z-index: 2;
@@ -110,6 +110,9 @@
             border: 3px solid $font-color-white;
             margin-top: 50px;
             z-index: 1;
+            position: relative;
+            transition: 0.2s background;
+            overflow: hidden;
             @include height-700 {
                 margin-top: 30px;
             }
@@ -122,6 +125,25 @@
             i {
                 margin-left: 20px;
                 font-size: 20px;
+                transition: 0.2s;
+            }
+            span {
+                transition: .2s;
+            }
+            .second-arrow {
+                position: absolute;
+                left: -50px;
+            }
+            &:hover {
+                background: $font-color-white;
+                color: $font-color-black;
+            }
+            
+            &:hover i {
+                transform: translateX(50px); 
+            }
+            &:hover span {
+                transform: translateX(40px); 
             }
         }
     }

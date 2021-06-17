@@ -493,7 +493,7 @@ Center all obiets and add responsive space around all children obiects
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("./images/home-background.jpg");
+  background-image: url("images/home-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 2;
@@ -650,6 +650,10 @@ Center all obiets and add responsive space around all children obiects
   border: 3px solid #fff;
   margin-top: 50px;
   z-index: 1;
+  position: relative;
+  -webkit-transition: 0.2s background;
+  transition: 0.2s background;
+  overflow: hidden;
 }
 
 @media (max-height: 700px) {
@@ -670,6 +674,33 @@ Center all obiets and add responsive space around all children obiects
 .section-home__content-container .home-button i {
   margin-left: 20px;
   font-size: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.section-home__content-container .home-button span {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.section-home__content-container .home-button .second-arrow {
+  position: absolute;
+  left: -50px;
+}
+
+.section-home__content-container .home-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.section-home__content-container .home-button:hover i {
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+}
+
+.section-home__content-container .home-button:hover span {
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
 }
 
 .section-home .home-button-next {
@@ -1645,5 +1676,15 @@ body, html {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background: #000;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #E1D2CA;
+  border-radius: 2px;
 }
 /*# sourceMappingURL=index.css.map */

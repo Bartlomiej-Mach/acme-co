@@ -1,9 +1,10 @@
-@import "./variables/variables";
-@import "./respond-variables/respond";
-@import "./section-navigation/section-navigation";
-@import "./section-home/section-home";
-@import "./section-information/section-information";
-@import "./section-footer/_section-footer";
+@import "./scss-files/variables/variables";
+@import "./scss-files/respond-variables/respond";
+@import "./scss-files/section-navigation/section-navigation";
+@import "./scss-files/section-home/section-home";
+@import "./scss-files/section-information/section-information";
+@import "./scss-files/section-footer/section-footer";
+
 
 body, html {
     width: 100%;
@@ -23,4 +24,14 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    
+    background: $font-color-black;
+  }
+body::-webkit-scrollbar-thumb {
+    background: #E1D2CA;
+    border-radius: 2px;
 }
