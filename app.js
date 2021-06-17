@@ -232,27 +232,6 @@ gsap.from('.bottom-slider', {
   ease: "none"
 });
 
-let proxy = { skew: 0 },
-    skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
-    clamp = gsap.utils.clamp(-1, 1); 
 
-ScrollTrigger.create({
-  onUpdate: (self) => {
-    let skew = clamp(self.getVelocity() / -300);
-    if (Math.abs(skew) > Math.abs(proxy.skew)) {
-      proxy.skew = skew;
-      gsap.to(proxy, 
-        {
-          skew: 0,
-          duration: 0.8,
-          ease: "power3", 
-          overwrite: true, 
-          onUpdate: () => skewSetter(proxy.skew)
-        });
-    }
-  }
-});
-
-gsap.set(".skewElem", {transformOrigin: "center ", force3D: true});
 
 

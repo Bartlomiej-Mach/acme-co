@@ -13,7 +13,7 @@
         padding: 20px 10%;
     }
     @include tabPort {
-        padding: 20px 3%;
+        padding: 10px 3%;
     }
     &__left-side {
         @include center();
@@ -31,11 +31,17 @@
                 font-size: 30px;
                 text-decoration: none;
                 transition: .2s;
+                @include smaller-than-600 {
+                    width: 40px;
+                    height: 40px;
+                }
                 .logo-letter {
                     display: inline-block;
                     margin: 0;
                     padding: 0 0 3px 0;
-                    
+                    @include smaller-than-600 {
+                        font-size: 20px;
+                    }
                 }
             }
             .logo-picture--active {
@@ -94,11 +100,11 @@
             overflow: hidden;
             @include smaller-than-880 {
                 display: flex;
-                
             }
             @include tabPort {
                 right:  3%;
             }
+            
 
             &__line {
                 width: 80%;
@@ -186,6 +192,10 @@
                         background: $font-color-white;
                         transform: translateY(2px);
                         transition: .2s;
+                        @include smaller-than-880 {
+                            background: $font-color-black;
+                            
+                        }
                     }
                     &:hover::before {
                         width: 110%;

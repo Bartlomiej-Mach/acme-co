@@ -92,6 +92,10 @@
                 font-size: 10px;
                 max-width: 300px;
             }
+            @include smaller-than-425 {
+                line-height: 15px;
+                max-width: 250px;
+            }
             
         }
         .home-button {

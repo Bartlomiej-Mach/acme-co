@@ -90,7 +90,7 @@ Center all obiets and add responsive space around all children obiects
 
 @media (max-width: 770px) {
   .section-navigation {
-    padding: 20px 3%;
+    padding: 10px 3%;
   }
 }
 
@@ -141,10 +141,23 @@ Center all obiets and add responsive space around all children obiects
   transition: .2s;
 }
 
+@media (max-width: 600px) {
+  .section-navigation__left-side .logo-wrapper .logo-picture {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .section-navigation__left-side .logo-wrapper .logo-picture .logo-letter {
   display: inline-block;
   margin: 0;
   padding: 0 0 3px 0;
+}
+
+@media (max-width: 600px) {
+  .section-navigation__left-side .logo-wrapper .logo-picture .logo-letter {
+    font-size: 20px;
+  }
 }
 
 .section-navigation__left-side .logo-wrapper .logo-picture--active {
@@ -382,6 +395,12 @@ Center all obiets and add responsive space around all children obiects
   transition: .2s;
 }
 
+@media (max-width: 880px) {
+  .section-navigation__right-side .list-wrapper .list--item .navigation-link::before {
+    background: #000;
+  }
+}
+
 .section-navigation__right-side .list-wrapper .list--item .navigation-link:hover::before {
   width: 110%;
 }
@@ -604,6 +623,13 @@ Center all obiets and add responsive space around all children obiects
   }
 }
 
+@media (max-width: 425px) {
+  .section-home__content-container .home-description {
+    line-height: 15px;
+    max-width: 250px;
+  }
+}
+
 .section-home__content-container .home-button {
   width: 215px;
   height: 40px;
@@ -768,6 +794,7 @@ Center all obiets and add responsive space around all children obiects
 
 .section-information {
   width: 100%;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -855,6 +882,12 @@ Center all obiets and add responsive space around all children obiects
   }
 }
 
+@media (max-width: 350px) {
+  .section-information__content-floor-1 .information-heading {
+    font-size: 30px;
+  }
+}
+
 .section-information__content-floor-1 .information-heading::before {
   content: 'subheading';
   font-size: 20px;
@@ -895,6 +928,13 @@ Center all obiets and add responsive space around all children obiects
 @media (max-width: 500px) {
   .section-information .slider-content-wrapper {
     margin-top: 0;
+    height: 500px;
+  }
+}
+
+@media (max-width: 425px) {
+  .section-information .slider-content-wrapper {
+    height: 400px;
   }
 }
 
@@ -1172,6 +1212,8 @@ Center all obiets and add responsive space around all children obiects
 @media (max-width: 425px) {
   .section-information .slider-content-wrapper__content-wrapper {
     max-width: 340px;
+    -webkit-transform: translateX(-50%) translateY(200%);
+            transform: translateX(-50%) translateY(200%);
   }
 }
 
@@ -1270,6 +1312,12 @@ Center all obiets and add responsive space around all children obiects
   }
 }
 
+@media (max-width: 350px) {
+  .section-information .section-information__content-floor-2 .information-heading {
+    font-size: 30px;
+  }
+}
+
 .section-information .section-information__content-floor-2 .information-heading::before {
   content: 'Q subheading';
   font-size: 20px;
@@ -1338,6 +1386,20 @@ Center all obiets and add responsive space around all children obiects
   .section-information .section-information__content-floor-2 .slider-content-wrapper__content-wrapper {
     -webkit-transform: translateX(-50%) translateY(180%);
             transform: translateX(-50%) translateY(180%);
+  }
+}
+
+@media (max-width: 1350px) and (max-width: 500px) {
+  .section-information .section-information__content-floor-2 .slider-content-wrapper__content-wrapper {
+    -webkit-transform: translateX(-50%) translateY(140%);
+            transform: translateX(-50%) translateY(140%);
+  }
+}
+
+@media (max-width: 1350px) and (max-width: 425px) {
+  .section-information .section-information__content-floor-2 .slider-content-wrapper__content-wrapper {
+    -webkit-transform: translateX(-50%) translateY(120%);
+            transform: translateX(-50%) translateY(120%);
   }
 }
 

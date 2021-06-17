@@ -1,5 +1,6 @@
 .section-information {
     width: 100%;
+    overflow: hidden;
     @include center-column();
     @include bigscreen {
         width: 1920px;
@@ -32,6 +33,9 @@
             @include smaller-than-425 {
                 font-size: 40px;
             }
+            @include smaller-than-350 {
+                font-size: 30px;
+            }
             &::before {
                 content: 'subheading';
                 font-size: 20px;
@@ -58,6 +62,10 @@
         }
         @include smaller-than-500 {
             margin-top: 0;
+            height: 500px;
+        }
+        @include smaller-than-425 {
+            height: 400px;
         }
         &__slider-wrapper {
             @include tabPort {
@@ -240,6 +248,7 @@
             }
             @include smaller-than-425 {
                 max-width: 340px;
+                transform: translateX(-50%) translateY(200%);
             }
             @include smaller-than-350 {
                 max-width: 292px;
@@ -300,6 +309,9 @@
             @include smaller-than-425 {
                 font-size: 40px;
             }
+            @include smaller-than-350 {
+                font-size: 30px;
+            }
             &::before {
                 content: 'Q subheading';
                 font-size: 20px;
@@ -335,6 +347,12 @@
                     height: 300px;
                     @include tabPort {
                         transform: translateX(-50%) translateY(180%);
+                    }
+                    @include smaller-than-500 {
+                        transform: translateX(-50%) translateY(140%);
+                    }
+                    @include smaller-than-425 {
+                        transform: translateX(-50%) translateY(120%);
                     }
                 }
             }
