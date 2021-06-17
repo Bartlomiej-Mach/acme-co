@@ -941,35 +941,35 @@ Center all obiets and add responsive space around all children obiects
 @media (max-width: 770px) {
   .section-information .slider-content-wrapper__slider-wrapper {
     transform: scale(80%);
-    -webkit-transform: scale(80%, 80%);
+    -webkit-transform: scale(0.8, 0.8);
   }
 }
 
 @media (max-width: 600px) {
   .section-information .slider-content-wrapper__slider-wrapper {
     transform: scale(70%);
-    -webkit-transform: scale(70%, 70%);
+    -webkit-transform: scale(0.7, 0.7);
   }
 }
 
 @media (max-width: 500px) {
   .section-information .slider-content-wrapper__slider-wrapper {
     transform: scale(60%);
-    -webkit-transform: scale(60%, 60%);
+    -webkit-transform: scale(0.6, 0.6);
   }
 }
 
 @media (max-width: 425px) {
   .section-information .slider-content-wrapper__slider-wrapper {
     transform: scale(50%);
-    -webkit-transform: scale(50%, 50%);
+    -webkit-transform: scale(0.5, 0.5);
   }
 }
 
 @media (max-width: 350px) {
   .section-information .slider-content-wrapper__slider-wrapper {
     transform: scale(43%);
-    -webkit-transform: scale(43%, 43%);
+    -webkit-transform: scale(0.43, 0.43);
   }
 }
 
