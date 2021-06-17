@@ -1,0 +1,26 @@
+@import "./variables/variables";
+@import "./respond-variables/respond";
+@import "./section-navigation/section-navigation";
+@import "./section-home/section-home";
+@import "./section-information/section-information";
+@import "./section-footer/_section-footer";
+
+body, html {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: white;
+    position: relative;
+    @include center-column();
+    scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

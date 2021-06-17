@@ -1,0 +1,138 @@
+//COLORS
+$backgourd-color: #000;
+$font-color-white: #fff;
+$font-color-dark-blue: #004777;
+$font-color-black: #000;
+$footer-color: #1A262F;
+
+//fonts
+$header-font: 'Lato', sans-serif;
+$content-font: 'Merriweather', serif;
+
+
+
+/* 
+
+Function 1
+Center all obiets and adding column look
+
+*/
+@mixin center-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+@mixin center-top-right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+@mixin center-bottom-right {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* 
+
+Function 2
+Center all obiets 
+
+*/
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 
+
+Function 3
+Center all obiets and adding column look
+starting at top of obiects
+
+*/
+@mixin center-top-column {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+/* 
+
+Function 4
+Center all obiets and add responsive space between children obiects
+
+*/
+@mixin center-space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* 
+
+Function 5
+Center all obiets and starting from LEFT side of obiect
+
+*/
+
+@mixin center-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin center-left-column {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* 
+
+Function 6
+Center all obiets and starting from RIGHT side of obiect
+
+*/
+@mixin center-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* 
+
+Function 7
+Center all obiets and starting from top side of obiect
+
+*/
+@mixin center-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+/* 
+
+Function 8
+Center all obiets and add responsive space around all children obiects
+
+*/
+@mixin center-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+

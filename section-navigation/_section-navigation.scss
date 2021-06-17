@@ -1,0 +1,230 @@
+.section-navigation {
+    width: 100%;
+    @include center-between();
+    position: fixed;
+    padding: 20px 290px;
+    z-index: 10;
+    top: 0;
+    z-index: 20;
+    @include bigscreen {
+        width: 1920px;
+    }
+    @include smaller-than-1550 {
+        padding: 20px 10%;
+    }
+    @include tabPort {
+        padding: 20px 3%;
+    }
+    &__left-side {
+        @include center();
+        z-index: 20;
+        .logo-wrapper {
+            @include center();
+            .logo-picture {
+                font-family: $header-font;
+                width: 50px;
+                height: 50px;
+                @include center();
+                border: 2px solid $font-color-white;
+                color: $font-color-white;
+                border-radius: 100px;
+                font-size: 30px;
+                text-decoration: none;
+                transition: .2s;
+                .logo-letter {
+                    display: inline-block;
+                    margin: 0;
+                    padding: 0 0 3px 0;
+                    
+                }
+            }
+            .logo-picture--active {
+                border: 2px solid $font-color-black;
+                color: $font-color-black;
+            }
+            .logo-name {
+                margin-left: 27px;
+                font-family: $header-font;
+                letter-spacing: 0.3em;
+                color: $font-color-white;
+                text-decoration: none;
+                transition: .2s;
+                position: relative;
+                overflow: hidden;
+                &::after {
+                    content: 'NATURE.';
+                    position: absolute;
+                    left: 0;
+                    transform: translateY(20px);
+                    transition: .2s;
+                    color: $font-color-white;
+                }
+                &:hover::after {
+                    transform: translateY(0px);
+                }
+                &:hover {
+                    color: transparent;
+                }
+            }
+            .logo-name--active{
+                color: $font-color-black;
+            }
+            
+        }
+        
+    }
+    &__right-side {
+        @include center();
+        @include smaller-than-880 {
+            z-index: 3;
+        }
+        .hamburger-menu {
+            z-index: 10;
+            width: 50px;
+            height: 30px;
+            background: transparent;
+            cursor: pointer;
+            border: 0;
+            margin: 0;
+            right: 10%;
+            position: absolute;
+            @include center();
+            transition: 0.2s;
+            display: none;
+            overflow: hidden;
+            @include smaller-than-880 {
+                display: flex;
+                
+            }
+            @include tabPort {
+                right:  3%;
+            }
+
+            &__line {
+                width: 80%;
+                height: 2px;
+                position: absolute;
+                background: $font-color-white;
+                transition: 0.2s;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                width: 80%;
+                height: 2px;
+                background: $font-color-white;
+                top: 0;
+                transition: 0.2s;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 80%;
+                height: 2px;
+                background: $font-color-white;
+                bottom: 0;
+                transition: 0.2s;
+            }
+            
+        }
+        .hamburger-menu--active .hamburger-menu__line {
+            background: transparent;
+            
+        }
+        .hamburger-menu--active:before {
+            background: $font-color-black;
+            width: 100%;
+            transform: translateY(15px) rotate(45deg);
+            
+        }
+        .hamburger-menu--active:after {
+            background: $font-color-black;
+            width: 100%;
+            transform: translateY(-15px) rotate(-45deg);
+            
+        }
+        
+        .list-wrapper {
+            font-family: $header-font;
+            transition: .2s;
+            @include center();
+            @include smaller-than-880 {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+                @include center-left-column();
+                padding-left: 10%;
+                background: transparent;
+                display: none;
+            }
+            
+            .list--item {
+                list-style: none;
+                margin-left: 30px;
+                @include smaller-than-880 {
+                    margin-top: 20px;
+                    opacity: 0;
+                }
+                .navigation-link {
+                    color: $font-color-white;
+                    text-decoration: none;
+                    font-size: 22px;
+                    position: relative;
+                    
+                    @include center();
+                    @include smaller-than-880 {
+                        font-size: 40px;
+                        color: $font-color-black;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 1px;
+                        background: $font-color-white;
+                        transform: translateY(2px);
+                        transition: .2s;
+                    }
+                    &:hover::before {
+                        width: 110%;
+                    }
+                }
+                
+            }
+        }
+        .list-wrapper--acvite {
+            opacity: 0;
+            display: flex;
+            animation: getColor .2s forwards .2s;  
+            .list--item {
+                animation: getIn .2s forwards .4s;  
+            }
+        }
+    }
+    
+}
+
+@keyframes getIn {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes getColor {
+    from {
+        background: transparent;
+    } to {
+        opacity: 1;
+        background: $font-color-white;
+    }
+}
