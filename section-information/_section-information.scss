@@ -70,18 +70,23 @@
         &__slider-wrapper {
             @include tabPort {
                 transform: scale(80%);
+                -webkit-transform:scale(80%, 80%);
             }
             @include smaller-than-600 {
                 transform: scale(70%);
+                -webkit-transform:scale(70%, 70%);
             }
             @include smaller-than-500 {
                 transform: scale(60%);
+                -webkit-transform:scale(60%, 60%);
             }
             @include smaller-than-425 {
                 transform: scale(50%);
+                -webkit-transform:scale(50%, 50%);
             }
             @include smaller-than-350 {
                 transform: scale(43%);
+                -webkit-transform:scale(43%, 43%);
             }
             .mySwiper2, .mySwiper4 {
                 max-width: 795px;
@@ -179,6 +184,7 @@
                     width: 100%;
                     .swiper-slide {
                         transform: scale(0.8);
+                        -webkit-transform:scale(0.8, 0.8);
                         transition: 0.1s;
                         &:hover::after {
                             width: 0px;

@@ -940,36 +940,36 @@ Center all obiets and add responsive space around all children obiects
 
 @media (max-width: 770px) {
   .section-information .slider-content-wrapper__slider-wrapper {
-    -webkit-transform: scale(80%);
-            transform: scale(80%);
+    transform: scale(80%);
+    -webkit-transform: scale(80%, 80%);
   }
 }
 
 @media (max-width: 600px) {
   .section-information .slider-content-wrapper__slider-wrapper {
-    -webkit-transform: scale(70%);
-            transform: scale(70%);
+    transform: scale(70%);
+    -webkit-transform: scale(70%, 70%);
   }
 }
 
 @media (max-width: 500px) {
   .section-information .slider-content-wrapper__slider-wrapper {
-    -webkit-transform: scale(60%);
-            transform: scale(60%);
+    transform: scale(60%);
+    -webkit-transform: scale(60%, 60%);
   }
 }
 
 @media (max-width: 425px) {
   .section-information .slider-content-wrapper__slider-wrapper {
-    -webkit-transform: scale(50%);
-            transform: scale(50%);
+    transform: scale(50%);
+    -webkit-transform: scale(50%, 50%);
   }
 }
 
 @media (max-width: 350px) {
   .section-information .slider-content-wrapper__slider-wrapper {
-    -webkit-transform: scale(43%);
-            transform: scale(43%);
+    transform: scale(43%);
+    -webkit-transform: scale(43%, 43%);
   }
 }
 
@@ -1108,8 +1108,8 @@ Center all obiets and add responsive space around all children obiects
 }
 
 .section-information .slider-content-wrapper__slider-wrapper .mySwiper .swiper-wrapper .swiper-slide, .section-information .slider-content-wrapper__slider-wrapper .mySwiper3 .swiper-wrapper .swiper-slide {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8, 0.8);
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
